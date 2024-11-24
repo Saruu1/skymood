@@ -6,9 +6,6 @@ body{
     justify-content: center;
     align-items: center;
     background-image: url("https://images.unsplash.com/photo-1606647352524-86d835bf9d5b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    /* background-position: center; */
-    /* background-repeat: no-repeat;
-    background-size: cover; */
 }
 .box{
     width: 45vw;
@@ -17,20 +14,16 @@ body{
     flex-direction: column;
     align-items: center;
     position: relative;
-    /* top: 4rem; */
     background-color: rgb(9, 100, 70);
     border-radius: 10px;
     gap: 8px;
 }
 .heading{
-    
     margin-top: 3rem;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 28px;
     font-weight: bold;
-    /* color: rgb(4, 160, 160); */
-    color: whitesmoke;
-    
+    color: whitesmoke;  
 }
 .description1{ 
     margin: 0;
@@ -56,6 +49,7 @@ body{
  border-radius: 0; 
  outline: none; 
  cursor: pointer;
+ color: rgb(69, 70, 73);
 }
 .button:hover{
     background-color: rgb(49, 101, 84);
@@ -65,7 +59,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* gap: 8px; */
 }
 .city{
     font-size: 18px;
@@ -135,17 +128,15 @@ body{
     }.errmsg, .displaymsg{
         font-size: 17px;
     }
-
 }
 @media all and (max-width:767px){
     .box{
         width: 80vw;
-        height: 85vh;
+        height: 80vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         position: relative;
-        /* top: 4rem; */
         background-color: rgb(9, 100, 70);
         border-radius: 5px;
         gap: 6px;

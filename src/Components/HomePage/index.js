@@ -13,14 +13,13 @@ const HomePage = () => {
     const handleChange = (e) =>{
         setCity(e.target.value);
     }
-    // const toCelsius = (Farh) =>{
-    // return (Farh - 32) * 5/9
-    // }
+    // funtion to capitalise the first alphabet of city and weather discription
     const Capitalise = (str) => {
        return (
         str.charAt(0).toUpperCase().concat(str.slice(1))
     )
-}
+} 
+     // main function to fetch the data from api
     async function fectchWeather () {
         setisLoading(true);
         const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${City}&units=metric&appid=${API_KEY}`;
@@ -54,6 +53,7 @@ const HomePage = () => {
         <input type="text" value={City} placeholder='Search your city'onChange={handleChange} />
         <button className="button" disabled={City.length===0} onClick={fectchWeather}>Search</button>
       </div>
+      {/* displaying error msg on conditions */}
       {errormsg && !isLoading && <div className="errmsg">{errormsg}</div>}
       {!SearchedCity && !errormsg && !City && <div className="displaymsg">Enter the city to get weather data.</div>}
       {isLoading? (<Loader/>): (SearchedCity && !errormsg && <div className="lowerInfo">
@@ -61,10 +61,7 @@ const HomePage = () => {
         <img src={IconLink} alt="" />
         <div className="temperature">{Temperature} °C</div>
         <div className="description2">{Capitalise(Description)}</div>
-        </div>)}
-        
-        
-      
+        </div>)} 
     </div>
   </div>
   )
